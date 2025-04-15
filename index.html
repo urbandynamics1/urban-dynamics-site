@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Urban Dynamics | Micromobility Consulting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Urban Dynamics</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -40,42 +40,19 @@
     }
 
     .hero {
-      background-color: #f0f0f0;
-      padding: 3rem 1rem 1rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cityscape {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto 2rem;
-    }
-
-    .hero svg {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .hero-text {
-      font-size: 1.8rem;
-      color: var(--navy);
-      font-weight: 600;
-      max-width: 800px;
-      margin: 0 auto;
+      height: 400px;
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAYAAAA7CM2xAAAACXBIWXMAAA7EAAAOxAGVKw4bAAA...') no-repeat center center;
+      background-size: contain;
+      background-color: #f9f9f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     section {
       padding: 4rem 2rem;
       max-width: 1000px;
       margin: auto;
-      background: #ffffff;
-    }
-
-    h2, h3, strong {
-      color: var(--navy);
     }
 
     h2 {
@@ -83,6 +60,7 @@
       margin-bottom: 1rem;
       text-align: center;
       position: relative;
+      color: var(--navy);
     }
 
     h2::after {
@@ -98,71 +76,6 @@
       color: var(--grey);
       font-size: 1rem;
       line-height: 1.7;
-    }
-
-    .service {
-      margin-bottom: 1rem;
-    }
-
-    .accordion {
-      background-color: var(--light-grey);
-      color: var(--navy);
-      cursor: pointer;
-      padding: 1rem;
-      width: 100%;
-      border: none;
-      outline: none;
-      text-align: left;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 0.5rem;
-      transition: background 0.3s ease;
-      position: relative;
-    }
-
-    .accordion::after {
-      content: '+';
-      font-size: 1.3rem;
-      position: absolute;
-      right: 1.5rem;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--navy);
-      transition: transform 0.3s ease;
-    }
-
-    .accordion.active::after {
-      content: '−';
-    }
-
-    .panel {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease-out, padding 0.3s ease;
-      background: #ffffff;
-      padding: 0 1rem;
-      border-left: 4px solid var(--lime);
-      border-radius: 0 0 0.5rem 0.5rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-      margin-bottom: 1rem;
-    }
-
-    .panel.show {
-      padding: 1rem 1rem 1.5rem;
-    }
-
-    .panel p {
-      margin-top: 0;
-      color: var(--grey);
-    }
-
-    .panel ul {
-      padding-left: 1.25rem;
-      color: #555;
-    }
-
-    .panel ul li {
-      margin-bottom: 0.5rem;
     }
 
     .contact-form input,
@@ -209,136 +122,32 @@
   <header>
     <nav>
       <a href="#about">About</a>
-      <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="cityscape">
-      <svg viewBox="0 0 800 200" preserveAspectRatio="xMidYMid meet">
-        <g fill="none" stroke="#c4e538" stroke-width="2">
-          <rect x="10" y="120" width="40" height="80" />
-          <rect x="70" y="100" width="30" height="100" />
-          <rect x="120" y="90" width="50" height="110" />
-          <rect x="190" y="110" width="60" height="90" />
-          <rect x="270" y="70" width="50" height="130" />
-          <rect x="340" y="100" width="40" height="100" />
-          <rect x="400" y="80" width="60" height="120" />
-          <rect x="480" y="110" width="30" height="90" />
-          <rect x="530" y="90" width="70" height="110" />
-          <rect x="620" y="60" width="60" height="140" />
-          <rect x="700" y="100" width="40" height="100" />
-        </g>
-      </svg>
-    </div>
-    <h1 class="hero-text">Micromobility is the small solution with a massive impact</h1>
-  </section>
+  <section class="hero"></section>
 
   <section id="about">
-    <h2>About Us</h2>
-    <p><strong>Seamless, sustainable and people-centred mobility solutions created in collaboration with private providers, cities, and communities.</strong></p>
-    <p><strong>Let’s move urban transportation forward, together.</strong></p>
+    <h2>About Urban Dynamics</h2>
+    <p><strong>Bridging the gap in Urban Transportation.</strong></p>
+    <p>Urban Dynamics is a micromobility consultancy dedicated to modernizing urban travel. We provide strategic planning, data analytics, and infrastructure consulting tailored to local governments, transit authorities, and startups.</p>
     <p><strong>Zachos Bifsas – Founder & Operations Strategist</strong></p>
-    <p>With 6 years leading micromobility initiatives across Europe and the U.S., he brings deep expertise in fleet optimization, stakeholder engagement, and policy collaboration. His mission is to align micromobility innovation with sustainable urban planning.</p>
-    <p><strong>Location:</strong> Athens, Greece<br/>
-    <strong>Email:</strong> Zachos@urbandynamics.gr</p>
-  </section>
-
-  <section id="services">
-    <h2>Our Services</h2>
-
-    <div class="service">
-      <button class="accordion">Strategic Planning & Policy Development</button>
-      <div class="panel">
-        <p>We collaborate with local governments and private partners to develop scalable and innovative micromobility strategies.</p>
-        <ul>
-          <li>City-wide mobility framework design</li>
-          <li>Stakeholder workshops and policy alignment</li>
-          <li>Roadmap for implementation and KPIs</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="service">
-      <button class="accordion">Infrastructure Optimization</button>
-      <div class="panel">
-        <p>We help design and adapt infrastructure that fosters safe and sustainable shared mobility.</p>
-        <ul>
-          <li>Bike lane planning and evaluation</li>
-          <li>Microhub and docking station consulting</li>
-          <li>Accessibility and equity assessments</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="service">
-      <button class="accordion">Fleet Operations & Data Analytics</button>
-      <div class="panel">
-        <p>Use real-time and historical data to optimize fleet performance, placement, and efficiency.</p>
-        <ul>
-          <li>Deployment heatmaps and analytics</li>
-          <li>Battery and charging logistics</li>
-          <li>Usage trend forecasting</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="service">
-      <button class="accordion">Regulatory Compliance & Safety</button>
-      <div class="panel">
-        <p>Support for aligning with local regulations and ensuring user safety and operational legality.</p>
-        <ul>
-          <li>City and EU policy consulting</li>
-          <li>Safety training modules and audits</li>
-          <li>Legal compliance checklists</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="service">
-      <button class="accordion">Public Collaboration & Integration</button>
-      <div class="panel">
-        <p>We bring micromobility closer to public transit systems and community stakeholders.</p>
-        <ul>
-          <li>Transit-data platform integration</li>
-          <li>Co-design sessions with residents</li>
-          <li>Campaigns for behavioral awareness</li>
-        </ul>
-      </div>
-    </div>
+    <p>With over 6 years in the field, Zachos has helped scale micromobility across Europe and the U.S. His mission: making cities more connected, efficient, and sustainable.</p>
   </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
+    <h2>Contact</h2>
     <form class="contact-form">
       <input type="text" placeholder="Your Name" required />
       <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="How can we collaborate?" required></textarea>
-      <button type="submit">Send Message</button>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
     </form>
   </section>
 
   <footer>
-    &copy; 2025 Urban Dynamics | Built for sustainable urban movement
+    &copy; 2025 Urban Dynamics — Athens, Greece | Zachos@urbandynamics.gr
   </footer>
-
-  <script>
-    const accordions = document.querySelectorAll(".accordion");
-
-    accordions.forEach(acc => {
-      acc.addEventListener("click", function () {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-          panel.classList.remove("show");
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-          panel.classList.add("show");
-        }
-      });
-    });
-  </script>
 </body>
 </html>
