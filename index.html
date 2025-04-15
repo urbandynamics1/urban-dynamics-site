@@ -40,9 +40,31 @@
     }
 
     .hero {
-      height: 360px;
-      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAMFBMVEXMzMyWlpbo6Oji4uLq6uqjo6PX19fV1dXc3Nzf39+wsLDh4eG/v7+mpqbp6el2dgfBAAADlUlEQVR4nO3cS2+bQBgF0NVlWf//N9NqHETZYrgYbX1Tvqa83khncIydrpNZDAAAAAAAAAAAAAAAAAAAAAACAPu4XP3YzNcNwnac51qYeF1NnPbFQXkt31+N5DVuVjL9b3hHV4xv5s/Tncu7rUrXzmr5YOqmvU3G8Wzt/MRW/f1+U76rmtdQ8b+fdPNzvhWr19bOqYf78vZ1kW50fuhz13U6Gsf0T2cvp5N1XjOPVevotPKV32PdZfZn9rsivbwmpjvWGr5HKe+6W+eQ0bbvaPqnzWqnkR3pJuO9VRu+xUX6rbXyE+6mtVrf2kTrK3Y1rPaC9zuv97hVnv7rzOyTrPZbtyHb3rqrZz/PZ7Y0v1kXpdd3TPf9v41v13s+uS8+jXSr3mvDq+zTWX88VXofvffLvULb6r9qtvOzOt9B/PdZ9u+ZbPqOrMvVLzKPl+51wF5z2fGz7m+Kv1xXjZl94rqcnT5N5n1NqNd9F/UNS6+k+z1hQ/d1qd6vZ9X1eO7f49dfX6zKf7Er/dOL0rv23vMPYzq/lF9n34+rRvj60qAAAAAAAAAAAAAAAAAAAAAAAAAACAL3sf8Ajcz56EYUz4MAAAAASUVORK5CYII=') no-repeat center center;
-      background-size: cover;
+      background-color: #f0f0f0;
+      padding: 3rem 1rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cityscape {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+
+    .hero svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-text {
+      font-size: 1.8rem;
+      color: var(--navy);
+      font-weight: 600;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     section {
@@ -192,7 +214,26 @@
     </nav>
   </header>
 
-  <section class="hero"></section>
+  <section class="hero">
+    <div class="cityscape">
+      <svg viewBox="0 0 800 200" preserveAspectRatio="xMidYMid meet">
+        <g fill="none" stroke="#c4e538" stroke-width="2">
+          <rect x="10" y="120" width="40" height="80" />
+          <rect x="70" y="100" width="30" height="100" />
+          <rect x="120" y="90" width="50" height="110" />
+          <rect x="190" y="110" width="60" height="90" />
+          <rect x="270" y="70" width="50" height="130" />
+          <rect x="340" y="100" width="40" height="100" />
+          <rect x="400" y="80" width="60" height="120" />
+          <rect x="480" y="110" width="30" height="90" />
+          <rect x="530" y="90" width="70" height="110" />
+          <rect x="620" y="60" width="60" height="140" />
+          <rect x="700" y="100" width="40" height="100" />
+        </g>
+      </svg>
+    </div>
+    <h1 class="hero-text">Micromobility is the small solution with a massive impact</h1>
+  </section>
 
   <section id="about">
     <h2>About Us</h2>
@@ -301,4 +342,3 @@
   </script>
 </body>
 </html>
-
