@@ -43,6 +43,20 @@
       height: 360px;
       background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAMFBMVEXMzMyWlpbo6Oji4uLq6uqjo6PX19fV1dXc3Nzf39+wsLDh4eG/v7+mpqbp6el2dgfBAAADlUlEQVR4nO3cS2+bQBgF0NVlWf//N9NqHETZYrgYbX1Tvqa83khncIydrpNZDAAAAAAAAAAAAAAAAAAAAAACAPu4XP3YzNcNwnac51qYeF1NnPbFQXkt31+N5DVuVjL9b3hHV4xv5s/Tncu7rUrXzmr5YOqmvU3G8Wzt/MRW/f1+U76rmtdQ8b+fdPNzvhWr19bOqYf78vZ1kW50fuhz13U6Gsf0T2cvp5N1XjOPVevotPKV32PdZfZn9rsivbwmpjvWGr5HKe+6W+eQ0bbvaPqnzWqnkR3pJuO9VRu+xUX6rbXyE+6mtVrf2kTrK3Y1rPaC9zuv97hVnv7rzOyTrPZbtyHb3rqrZz/PZ7Y0v1kXpdd3TPf9v41v13s+uS8+jXSr3mvDq+zTWX88VXofvffLvULb6r9qtvOzOt9B/PdZ9u+ZbPqOrMvVLzKPl+51wF5z2fGz7m+Kv1xXjZl94rqcnT5N5n1NqNd9F/UNS6+k+z1hQ/d1qd6vZ9X1eO7f49dfX6zKf7Er/dOL0rv23vMPYzq/lF9n34+rRvj60qAAAAAAAAAAAAAAAAAAAAAAAAAACAL3sf8Ajcz56EYUz4MAAAAASUVORK5CYII=') no-repeat center center;
       background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      background: rgba(12, 36, 66, 0.75);
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      color: #fff;
     }
 
     section {
@@ -79,68 +93,11 @@
     }
 
     .service {
-      margin-bottom: 1rem;
-    }
-
-    .accordion {
-      background-color: var(--light-grey);
-      color: var(--navy);
-      cursor: pointer;
-      padding: 1rem;
-      width: 100%;
-      border: none;
-      outline: none;
-      text-align: left;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 0.5rem;
-      transition: background 0.3s ease;
-      position: relative;
-    }
-
-    .accordion::after {
-      content: '+';
-      font-size: 1.3rem;
-      position: absolute;
-      right: 1.5rem;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--navy);
-      transition: transform 0.3s ease;
-    }
-
-    .accordion.active::after {
-      content: '−';
-    }
-
-    .panel {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease-out, padding 0.3s ease;
-      background: #ffffff;
-      padding: 0 1rem;
-      border-left: 4px solid var(--lime);
-      border-radius: 0 0 0.5rem 0.5rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-      margin-bottom: 1rem;
-    }
-
-    .panel.show {
-      padding: 1rem 1rem 1.5rem;
-    }
-
-    .panel p {
-      margin-top: 0;
-      color: var(--grey);
-    }
-
-    .panel ul {
-      padding-left: 1.25rem;
-      color: #555;
-    }
-
-    .panel ul li {
-      margin-bottom: 0.5rem;
+      background: var(--light-grey);
+      margin-bottom: 2rem;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
     .contact-form input,
@@ -192,7 +149,9 @@
     </nav>
   </header>
 
-  <section class="hero"></section>
+  <section class="hero">
+    <h1>Micromobility is the small solution with a massive impact</h1>
+  </section>
 
   <section id="about">
     <h2>About Us</h2>
@@ -206,98 +165,29 @@
 
   <section id="services">
     <h2>Our Services</h2>
-
     <div class="service">
-      <button class="accordion">Strategic Planning & Policy Development</button>
-      <div class="panel">
-        <p>We collaborate with local governments and private partners to develop scalable and innovative micromobility strategies.</p>
-        <ul>
-          <li>City-wide mobility framework design</li>
-          <li>Stakeholder workshops and policy alignment</li>
-          <li>Roadmap for implementation and KPIs</li>
-        </ul>
-      </div>
+      <h3>Strategic Planning & Policy Development</h3>
+      <p>Craft forward-thinking micromobility policies in partnership with local governments.</p>
     </div>
-
     <div class="service">
-      <button class="accordion">Infrastructure Optimization</button>
-      <div class="panel">
-        <p>We help design and adapt infrastructure that fosters safe and sustainable shared mobility.</p>
-        <ul>
-          <li>Bike lane planning and evaluation</li>
-          <li>Microhub and docking station consulting</li>
-          <li>Accessibility and equity assessments</li>
-        </ul>
-      </div>
+      <h3>Infrastructure Optimization</h3>
+      <p>Design and enhance urban environments to support safe and accessible micromobility usage.</p>
     </div>
-
     <div class="service">
-      <button class="accordion">Fleet Operations & Data Analytics</button>
-      <div class="panel">
-        <p>Use real-time and historical data to optimize fleet performance, placement, and efficiency.</p>
-        <ul>
-          <li>Deployment heatmaps and analytics</li>
-          <li>Battery and charging logistics</li>
-          <li>Usage trend forecasting</li>
-        </ul>
-      </div>
+      <h3>Fleet Operations & Data Analytics</h3>
+      <p>Smart deployment, battery management, GPS tracking, and usage analytics.</p>
     </div>
-
     <div class="service">
-      <button class="accordion">Regulatory Compliance & Safety</button>
-      <div class="panel">
-        <p>Support for aligning with local regulations and ensuring user safety and operational legality.</p>
-        <ul>
-          <li>City and EU policy consulting</li>
-          <li>Safety training modules and audits</li>
-          <li>Legal compliance checklists</li>
-        </ul>
-      </div>
+      <h3>Regulatory Compliance & Safety</h3>
+      <p>Ensure alignment with regulations and promote safety initiatives city-wide.</p>
     </div>
-
     <div class="service">
-      <button class="accordion">Public Collaboration & Integration</button>
-      <div class="panel">
-        <p>We bring micromobility closer to public transit systems and community stakeholders.</p>
-        <ul>
-          <li>Transit-data platform integration</li>
-          <li>Co-design sessions with residents</li>
-          <li>Campaigns for behavioral awareness</li>
-        </ul>
-      </div>
+      <h3>Public Collaboration & Integration</h3>
+      <p>Work with city stakeholders to connect micromobility with public transit ecosystems.</p>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
     <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="How can we collaborate?" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    &copy; 2025 Urban Dynamics | Built for sustainable urban movement
-  </footer>
-
-  <script>
-    const accordions = document.querySelectorAll(".accordion");
-
-    accordions.forEach(acc => {
-      acc.addEventListener("click", function () {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-          panel.classList.remove("show");
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-          panel.classList.add("show");
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+      <input type
