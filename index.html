@@ -23,64 +23,169 @@
     }
 
     header {
+      background: #ffffff;
+      padding: 2rem;
       text-align: center;
-      padding: 2rem 2rem 0.5rem;
       border-bottom: 3px solid var(--lime);
-      background-color: #ffffff;
-    }
-
-    header img.logo {
-      max-width: 200px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-
-    nav {
-      margin-bottom: 1rem;
     }
 
     nav a {
       color: var(--navy);
-      margin: 0 1rem;
+      margin: 0 1.5rem;
       text-decoration: none;
       font-weight: 600;
       text-transform: uppercase;
       font-size: 0.9rem;
+      letter-spacing: 1px;
     }
 
     .hero {
-      height: 300px;
-      background-color: var(--light-grey);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      color: var(--navy);
-      font-weight: bold;
+      height: 200px;
+      background: url('https://via.placeholder.com/400x100.png?text=Urban+Dynamics+Logo') no-repeat center center;
+      background-size: contain;
+      background-color: white;
     }
 
     section {
       padding: 4rem 2rem;
       max-width: 1000px;
       margin: auto;
+      background: #ffffff;
+    }
+
+    h2, h3, strong {
+      color: var(--navy);
     }
 
     h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
       text-align: center;
-      color: var(--navy);
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 60px;
+      background: var(--lime);
+      margin: 0.5rem auto;
     }
 
     p {
       color: var(--grey);
       font-size: 1rem;
-      line-height: 1.6;
+      line-height: 1.7;
+    }
+
+    .service {
+      margin-bottom: 1rem;
+    }
+
+    .accordion {
+      background-color: var(--light-grey);
+      color: var(--navy);
+      cursor: pointer;
+      padding: 1rem;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      transition: background 0.3s ease;
+      position: relative;
+    }
+
+    .accordion::after {
+      content: '+';
+      font-size: 1.3rem;
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--navy);
+      transition: transform 0.3s ease;
+    }
+
+    .accordion.active::after {
+      content: '−';
+    }
+
+    .panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.3s ease;
+      background: #ffffff;
+      padding: 0 1rem;
+      border-left: 4px solid var(--lime);
+      border-radius: 0 0 0.5rem 0.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      margin-bottom: 1rem;
+    }
+
+    .panel.show {
+      padding: 1rem 1rem 1.5rem;
+    }
+
+    .panel p {
+      margin-top: 0;
+      color: var(--grey);
+    }
+
+    .panel ul {
+      padding-left: 1.25rem;
+      color: #555;
+    }
+
+    .panel ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin: 0.75rem 0;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      background: #fff;
+      color: #111;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      background: var(--navy);
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: var(--lime);
+      color: var(--navy);
+    }
+
+    footer {
+      background: #f9f9f9;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #999;
+      border-top: 2px solid var(--lime);
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img class="logo" src="https://via.placeholder.com/200x80?text=Urban+Dynamics" alt="Urban Dynamics Logo">
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -88,14 +193,112 @@
     </nav>
   </header>
 
-  <div class="hero">
-    Welcome to Urban Dynamics
-  </div>
+  <section class="hero"></section>
 
   <section id="about">
     <h2>About Us</h2>
-    <p>Urban Dynamics is a micromobility consulting firm that helps cities and companies plan smarter urban transportation solutions.</p>
+    <p><strong>Seamless, sustainable and people-centred mobility solutions created in collaboration with private providers, cities, and communities.</strong></p>
+    <p><strong>Let’s move urban transportation forward, together.</strong></p>
+    <p><strong>Zachos Bifsas – Founder & Operations Strategist</strong></p>
+    <p>With 6 years leading micromobility initiatives across Europe and the U.S., he brings deep expertise in fleet optimization, stakeholder engagement, and policy collaboration. His mission is to align micromobility innovation with sustainable urban planning.</p>
+    <p><strong>Location:</strong> Athens, Greece<br/>
+    <strong>Email:</strong> Zachos@urbandynamics.gr</p>
   </section>
 
+  <section id="services">
+    <h2>Our Services</h2>
+
+    <div class="service">
+      <button class="accordion">Strategic Planning & Policy Development</button>
+      <div class="panel">
+        <p>We collaborate with local governments and private partners to develop scalable and innovative micromobility strategies.</p>
+        <ul>
+          <li>City-wide mobility framework design</li>
+          <li>Stakeholder workshops and policy alignment</li>
+          <li>Roadmap for implementation and KPIs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service">
+      <button class="accordion">Infrastructure Optimization</button>
+      <div class="panel">
+        <p>We help design and adapt infrastructure that fosters safe and sustainable shared mobility.</p>
+        <ul>
+          <li>Bike lane planning and evaluation</li>
+          <li>Microhub and docking station consulting</li>
+          <li>Accessibility and equity assessments</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service">
+      <button class="accordion">Fleet Operations & Data Analytics</button>
+      <div class="panel">
+        <p>Use real-time and historical data to optimize fleet performance, placement, and efficiency.</p>
+        <ul>
+          <li>Deployment heatmaps and analytics</li>
+          <li>Battery and charging logistics</li>
+          <li>Usage trend forecasting</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service">
+      <button class="accordion">Regulatory Compliance & Safety</button>
+      <div class="panel">
+        <p>Support for aligning with local regulations and ensuring user safety and operational legality.</p>
+        <ul>
+          <li>City and EU policy consulting</li>
+          <li>Safety training modules and audits</li>
+          <li>Legal compliance checklists</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service">
+      <button class="accordion">Public Collaboration & Integration</button>
+      <div class="panel">
+        <p>We bring micromobility closer to public transit systems and community stakeholders.</p>
+        <ul>
+          <li>Transit-data platform integration</li>
+          <li>Co-design sessions with residents</li>
+          <li>Campaigns for behavioral awareness</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="How can we collaborate?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Urban Dynamics | Built for sustainable urban movement
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach(acc => {
+      acc.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+          panel.classList.remove("show");
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.classList.add("show");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
