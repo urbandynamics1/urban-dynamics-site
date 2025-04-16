@@ -21,10 +21,15 @@
     }
 
     header {
-      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAMFBMVEXMzMyWlpbo6Oji4uLq6uqjo6PX19fV1dXc3Nzf39+wsLDh4eG/v7+mpqbp6el2dgfBAAADlUlEQVR4nO3cS2+bQBgF0NVlWf//N9NqHETZYrgYbX1Tvqa83khncIydrpNZDAAAAAAAAAAAAAAAAAAAAAACAPu4XP3YzNcNwnac51qYeF1NnPbFQXkt31+N5DVuVjL9b3hHV4xv5s/Tncu7rUrXzmr5YOqmvU3G8Wzt/MRW/f1+U76rmtdQ8b+fdPNzvhWr19bOqYf78vZ1kW50fuhz13U6Gsf0T2cvp5N1XjOPVevotPKV32PdZfZn9rsivbwmpjvWGr5HKe+6W+eQ0bbvaPqnzWqnkR3pJuO9VRu+xUX6rbXyE+6mtVrf2kTrK3Y1rPaC9zuv97hVnv7rzOyTrPZbtyHb3rqrZz/PZ7Y0v1kXpdd3TPf9v41v13s+uS8+jXSr3mvDq+zTWX88VXofvffLvULb6r9qtvOzOt9B/PdZ9u+ZbPqOrMvVLzKPl+51wF5z2fGz7m+Kv1xXjZl94rqcnT5N5n1NqNd9F/UNS6+k+z1hQ/d1qd6vZ9X1eO7f49dfX6zKf7Er/dOL0rv23vMPYzq/lF9n34+rRvj60qAAAAAAAAAAAAAAAAAAAAAAAAAACAL3sf8Ajcz56EYUz4MAAAAASUVORK5CYII=') no-repeat center top / contain;
-      padding: 6rem 2rem 2rem;
       text-align: center;
+      padding: 2rem 2rem 0.5rem;
       border-bottom: 3px solid var(--lime);
+    }
+
+    header img.logo {
+      max-width: 220px;
+      height: auto;
+      margin-bottom: 1rem;
     }
 
     nav a {
@@ -39,8 +44,7 @@
 
     .hero {
       height: 360px;
-      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAMFBMVEXMzMyWlpbo6Oji4uLq6uqjo6PX19fV1dXc3Nzf39+wsLDh4eG/v7+mpqbp6el2dgfBAAADlUlEQVR4nO3cS2+bQBgF0NVlWf//N9NqHETZYrgYbX1Tvqa83khncIydrpNZDAAAAAAAAAAAAAAAAAAAAAACAPu4XP3YzNcNwnac51qYeF1NnPbFQXkt31+N5DVuVjL9b3hHV4xv5s/Tncu7rUrXzmr5YOqmvU3G8Wzt/MRW/f1+U76rmtdQ8b+fdPNzvhWr19bOqYf78vZ1kW50fuhz13U6Gsf0T2cvp5N1XjOPVevotPKV32PdZfZn9rsivbwmpjvWGr5HKe+6W+eQ0bbvaPqnzWqnkR3pJuO9VRu+xUX6rbXyE+6mtVrf2kTrK3Y1rPaC9zuv97hVnv7rzOyTrPZbtyHb3rqrZz/PZ7Y0v1kXpdd3TPf9v41v13s+uS8+jXSr3mvDq+zTWX88VXofvffLvULb6r9qtvOzOt9B/PdZ9u+ZbPqOrMvVLzKPl+51wF5z2fGz7m+Kv1xXjZl94rqcnT5N5n1NqNd9F/UNS6+k+z1hQ/d1qd6vZ9X1eO7f49dfX6zKf7Er/dOL0rv23vMPYzq/lF9n34+rRvj60qAAAAAAAAAAAAAAAAAAAAAAAAAACAL3sf8Ajcz56EYUz4MAAAAASUVORK5CYII=') no-repeat center center;
-      background-size: cover;
+      background: #f3f3f3;
     }
 
     section {
@@ -76,10 +80,6 @@
       line-height: 1.7;
     }
 
-    .service {
-      margin-bottom: 1rem;
-    }
-
     .accordion {
       background-color: var(--light-grey);
       color: var(--navy);
@@ -94,6 +94,7 @@
       border-radius: 0.5rem;
       transition: background 0.3s ease;
       position: relative;
+      margin-bottom: 1rem;
     }
 
     .accordion::after {
@@ -120,7 +121,6 @@
       border-left: 4px solid var(--lime);
       border-radius: 0 0 0.5rem 0.5rem;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-      margin-bottom: 1rem;
     }
 
     .panel.show {
@@ -183,6 +183,9 @@
 </head>
 <body>
   <header>
+    <!-- Insert your logo image here -->
+    <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAMFBMVEXMzMyWlpbo6Oji4uLq6uqjo6PX19fV1dXc3Nzf39+wsLDh4eG/v7+mpqbp6el2dgfBAAADlUlEQVR4nO3cS2+bQBgF0NVlWf//N9NqHETZYrgYbX1Tvqa83khncIydrpNZDAAAAAAAAAAAAAAAAAAAAAACAPu4XP3YzNcNwnac51qYeF1NnPbFQXkt31+N5DVuVjL9b3hHV4xv5s/Tncu7rUrXzmr5YOqmvU3G8Wzt/MRW/f1+U76rmtdQ8b+fdPNzvhWr19bOqYf78vZ1kW50fuhz13U6Gsf0T2cvp5N1XjOPVevotPKV32PdZfZn9rsivbwmpjvWGr5HKe+6W+eQ0bbvaPqnzWqnkR3pJuO9VRu+xUX6rbXyE+6mtVrf2kTrK3Y1rPaC9zuv97hVnv7rzOyTrPZbtyHb3rqrZz/PZ7Y0v1kXpdd3TPf9v41v13s+uS8+jXSr3mvDq+zTWX88VXofvffLvULb6r9qtvOzOt9B/PdZ9u+ZbPqOrMvVLzKPl+51wF5z2fGz7m+Kv1xXjZl94rqcnT5N5n1NqNd9F/UNS6+k+z1hQ/d1qd6vZ9X1eO7f49dfX6zKf7Er/dOL0rv23vMPYzq/lF9n34+rRvj60qAAAAAAAAAAAAAAAAAAAAAAAAAACAL3sf8Ajcz56EYUz4MAAAAASUVORK5CYII=" alt="Urban Dynamics Logo" />
+    
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -192,4 +195,4 @@
 
   <section class="hero"></section>
 
-  <!-- The rest of your HTML remains unchanged -->
+  <!-- Continue with your page content -->
