@@ -186,7 +186,7 @@
 </head>
 <body>
   <header>
-    <img src="1.png" alt="Urban Dynamics Logo" style="max-width: 300px; height: auto; margin-bottom: 1rem;" />
+    <img src="1.png" alt="Urban Dynamics Logo" style="max-width: 300px; height: auto; display: block; margin: 0 auto 1rem;" />
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -196,4 +196,110 @@
 
   <section class="hero"></section>
 
-  <!-- Rest of the HTML remains unchanged -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p><strong>Seamless, sustainable and people-centred mobility solutions created in collaboration with private providers, cities, and communities.</strong></p>
+    <p><strong>Let’s move urban transportation forward, together.</strong></p>
+    <p><strong>Zachos Bifsas – Founder & Operations Strategist</strong></p>
+    <p>With 6 years leading micromobility initiatives across Europe and the U.S., he brings deep expertise in fleet optimization, stakeholder engagement, and policy collaboration. His mission is to align micromobility innovation with sustainable urban planning.</p>
+    <p><strong>Location:</strong> Athens, Greece<br/>
+    <strong>Email:</strong> Zachos@urbandynamics.gr</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+
+    <div class="service">
+      <button class="accordion">Strategic Planning & Policy Development</button>
+      <div class="panel">
+        <p>We collaborate with local governments and private partners to develop scalable and innovative micromobility strategies.</p>
+        <ul>
+          <li>City-wide mobility framework design</li>
+          <li>Stakeholder workshops and policy alignment</li>
+          <li>Roadmap for implementation and KPIs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service">
+      <button class="accordion">Infrastructure Optimization</button>
+      <div class="panel">
+        <p>We help design and adapt infrastructure that fosters safe and sustainable shared mobility.</p>
+        <ul>
+          <li>Bike lane planning and evaluation</li>
+          <li>Microhub and docking station consulting</li>
+          <li>Accessibility and equity assessments</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service">
+      <button class="accordion">Fleet Operations & Data Analytics</button>
+      <div class="panel">
+        <p>Use real-time and historical data to optimize fleet performance, placement, and efficiency.</p>
+        <ul>
+          <li>Deployment heatmaps and analytics</li>
+          <li>Battery and charging logistics</li>
+          <li>Usage trend forecasting</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service">
+      <button class="accordion">Regulatory Compliance & Safety</button>
+      <div class="panel">
+        <p>Support for aligning with local regulations and ensuring user safety and operational legality.</p>
+        <ul>
+          <li>City and EU policy consulting</li>
+          <li>Safety training modules and audits</li>
+          <li>Legal compliance checklists</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service">
+      <button class="accordion">Public Collaboration & Integration</button>
+      <div class="panel">
+        <p>We bring micromobility closer to public transit systems and community stakeholders.</p>
+        <ul>
+          <li>Transit-data platform integration</li>
+          <li>Co-design sessions with residents</li>
+          <li>Campaigns for behavioral awareness</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="How can we collaborate?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Urban Dynamics | Built for sustainable urban movement
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach(acc => {
+      acc.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+          panel.classList.remove("show");
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.classList.add("show");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
