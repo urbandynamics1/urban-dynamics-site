@@ -41,9 +41,7 @@
 
     .hero {
       height: 200px;
-      background: url('https://via.placeholder.com/400x100.png?text=Urban+Dynamics+Logo') no-repeat center center;
-      background-size: contain;
-      background-color: white;
+      background: white;
     }
 
     section {
@@ -186,7 +184,9 @@
 </head>
 <body>
   <header>
-    <img src="1.png" alt="Urban Dynamics Logo" style="max-width: 300px; height: auto; display: block; margin: 0 auto 1rem;" />
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABBoAAAJYCAYAAADMnIUCAAAACXBIWXMAAC4jAAAuIwF4pT92AAAE6GlUWHRY..." 
+         alt="Urban Dynamics Logo" 
+         style="max-width: 300px; height: auto; display: block; margin: 0 auto 1rem;" />
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -200,8 +200,8 @@
     <h2>About Us</h2>
     <p><strong>Seamless, sustainable and people-centred mobility solutions created in collaboration with private providers, cities, and communities.</strong></p>
     <p><strong>Let’s move urban transportation forward, together.</strong></p>
-    <p><strong>Zachos Bifsas – Founder & Operations Strategist</strong></p>
     <p>With 6 years leading micromobility initiatives across Europe and the U.S., he brings deep expertise in fleet optimization, stakeholder engagement, and policy collaboration. His mission is to align micromobility innovation with sustainable urban planning.</p>
+    <p><strong>Zachos Bifsas – Founder & Operations Strategist</strong></p>
     <p><strong>Location:</strong> Athens, Greece<br/>
     <strong>Email:</strong> Zachos@urbandynamics.gr</p>
   </section>
@@ -286,7 +286,6 @@
 
   <script>
     const accordions = document.querySelectorAll(".accordion");
-
     accordions.forEach(acc => {
       acc.addEventListener("click", function () {
         this.classList.toggle("active");
