@@ -40,8 +40,8 @@
     }
 
     .hero {
-      height: 200px;
-      background: white;
+      height: 360px;
+      background: #f0f0f0;
     }
 
     section {
@@ -126,6 +126,7 @@
 
     .panel.show {
       padding: 1rem 1rem 1.5rem;
+      max-height: 1000px;
     }
 
     .panel p {
@@ -172,13 +173,6 @@
       color: var(--navy);
     }
 
-    #thank-you {
-      display: none;
-      color: green;
-      font-weight: bold;
-      margin-top: 1rem;
-    }
-
     footer {
       background: #f9f9f9;
       padding: 2rem;
@@ -191,9 +185,6 @@
 </head>
 <body>
   <header>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABBoAAAJYCAYAAADMnIUCAAAACXBIWXMAAC4jAAAuIwF4pT92AAAE6GlUWHRY..." 
-         alt="Urban Dynamics Logo" 
-         style="max-width: 300px; height: auto; display: block; margin: 0 auto 1rem;" />
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -207,26 +198,84 @@
     <h2>About Us</h2>
     <p><strong>Seamless, sustainable and people-centred mobility solutions created in collaboration with private providers, cities, and communities.</strong></p>
     <p><strong>Let’s move urban transportation forward, together.</strong></p>
-    <p>Leading micromobility initiatives across Europe and the EMEA from 2019, We brings deep expertise in fleet optimization, stakeholder engagement, and policy collaboration. Our mission is to align micromobility innovation with sustainable urban planning.</p>
     <p><strong>Zachos Bifsas – Founder & Operations Strategist</strong></p>
+    <p>With  years leading micromobility initiatives across Europe and the EMEA, we brings deep expertise in fleet optimization, stakeholder engagement, and policy collaboration. Our mission is to align micromobility innovation with sustainable urban planning.</p>
     <p><strong>Location:</strong> Athens, Greece<br/>
     <strong>Email:</strong> Zachos@urbandynamics.gr</p>
   </section>
 
   <section id="services">
     <h2>Our Services</h2>
-    <!-- Services content here (same as before) -->
-    <!-- Keeping this part unchanged for brevity -->
+
+    <div class="service">
+      <button class="accordion">Public Sector Engagement & Stakeholder Collaboration</button>
+      <div class="panel">
+        <ul>
+          <li>Stakeholder mapping and engagement strategy</li>
+          <li>Community co-design workshops and policy input sessions</li>
+          <li>Public awareness campaigns and behavior-change communications</li>
+          <li>Cross-departmental coordination (transport, sustainability, urban planning)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service">
+      <button class="accordion">Strategic Planning & Policy Development</button>
+      <div class="panel">
+        <ul>
+          <li>Mobility master planning</li>
+          <li>Policy reviews and regulatory gap analysis</li>
+          <li>KPI development and monitoring roadmaps</li>
+          <li>Equity and accessibility integration</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service">
+      <button class="accordion">Fleet & Operations Management</button>
+      <div class="panel">
+        <ul>
+          <li>Fleet sizing, siting, and rebalancing strategy</li>
+          <li>Preventative maintenance and on-demand repair systems</li>
+          <li>Battery lifecycle optimization and logistics</li>
+          <li>Real-time telematics and usage analytics</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service">
+      <button class="accordion">Infrastructure Planning & Optimization</button>
+      <div class="panel">
+        <ul>
+          <li>Microhub/docking station design</li>
+          <li>Parking and no-ride zone mapping</li>
+          <li>Infrastructure audits and user-flow assessments</li>
+          <li>Data-informed urban integration</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service">
+      <button class="accordion">Data Analytics, Reporting & Compliance</button>
+      <div class="panel">
+        <ul>
+          <li>Usage trend visualization and deployment heatmaps</li>
+          <li>Ridership, demographic, and financial performance dashboards</li>
+          <li>Environmental impact tracking & emissions analysis</li>
+          <li>Safety audits and rider training insights</li>
+          <li>Local, regional, and EU compliance reporting</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <form class="contact-form" action="https://formspree.io/f/xqapojde" method="POST" id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="How can we collaborate?" required></textarea>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="How can we collaborate?" required></textarea>
       <button type="submit">Send Message</button>
-      <p id="thank-you">Thank you for your message! We’ll be in touch soon.</p>
     </form>
   </section>
 
@@ -236,46 +285,26 @@
 
   <script>
     const accordions = document.querySelectorAll(".accordion");
+
     accordions.forEach(acc => {
       acc.addEventListener("click", function () {
-        this.classList.toggle("active");
         const panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-          panel.classList.remove("show");
-        } else {
+        const isActive = this.classList.contains("active");
+
+        // Close all panels
+        accordions.forEach(other => {
+          other.classList.remove("active");
+          other.nextElementSibling.style.maxHeight = null;
+          other.nextElementSibling.classList.remove("show");
+        });
+
+        // Open current if not already open
+        if (!isActive) {
+          this.classList.add("active");
           panel.style.maxHeight = panel.scrollHeight + "px";
           panel.classList.add("show");
         }
       });
-    });
-
-    // Handle contact form submission
-    const form = document.getElementById('contact-form');
-    const thankYouMessage = document.getElementById('thank-you');
-
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      const formData = new FormData(form);
-
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-
-        if (response.ok) {
-          form.reset();
-          thankYouMessage.style.display = 'block';
-        } else {
-          alert('Something went wrong. Please try again.');
-        }
-      } catch (error) {
-        alert('There was an error submitting the form.');
-      }
     });
   </script>
 </body>
